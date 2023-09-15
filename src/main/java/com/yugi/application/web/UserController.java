@@ -25,6 +25,12 @@ public class UserController {
         return user;
     }
 
+    @RequestMapping(method = RequestMethod.DELETE, value="/user/{id}")
+    public Boolean removeUser(@PathVariable("id") long id) {
+        User user = mapper.removeUser(id);
+        return true;
+    }
+
     @RequestMapping(method = RequestMethod.GET, value="/users")
     public List<User> getUsers() {
         List<User> users = mapper.getUsers();

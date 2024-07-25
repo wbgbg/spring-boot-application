@@ -1,0 +1,12 @@
+on: 
+  push:
+    paths:
+      - 'README.md'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: test
+    steps:
+      - name: hello
+        run: echo "hi"

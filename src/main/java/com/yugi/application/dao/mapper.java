@@ -17,4 +17,7 @@ public interface Mapper {
 
     @Insert("INSERT INTO users(userName, passWord) VALUES(#{userName}, #{passWord})")
     void addUser(User user);
+
+    @Insert("DELETE FROM users where id = ${id})")
+    void removeUser(User user);
 }
